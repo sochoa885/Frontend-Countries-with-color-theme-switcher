@@ -1,0 +1,53 @@
+@import url('../../styles/var.css');
+
+.navbar {
+    background-color: var(--elements);
+    box-shadow: var(--shadow);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .banner {
+    margin-left: var(--margin);
+    width: 50%;
+    font-weight: bold;
+    font-size: min(3.8vw, 23px);
+}
+
+.navbar .switch-mode {
+    width: 50%;
+    display: flex;
+    margin-right: var(--margin);
+    justify-content: flex-end;
+}
+
+.navbar .mode-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navbar .label {
+    text-align: center;
+    font-size: min(3.5vw, 15px);
+    font-weight: 300;
+}
+
+.navbar .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background-image: var(--icon-mode);
+    background-size: cover;
+    filter: var(--filter);
+    margin-right: 5px;
+}

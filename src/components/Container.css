@@ -1,0 +1,26 @@
+@import url('./../styles/var.css');
+
+.main {
+    margin: var(--margin);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.select-region {
+    margin-right: 16px;
+}
+
+.input-search {
+    margin-left: 16px;
+}
+
+@media (max-width: 600px) {
+    .main {
+        grid-template-columns: 1fr;
+    }
+
+    .input-search,
+    .select-region {
+        margin: 8px 0;
+    }
+}
