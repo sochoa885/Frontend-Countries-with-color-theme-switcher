@@ -1,6 +1,8 @@
 @import url('./styles/var.css');
 
-body{
-    background-color: var(--background);
+body {
     color: var(--text-primary);
+    font-weight: 300;
+    background-color: var(--background);
+    transition: background-color 0.2s ease-in-out;
 }

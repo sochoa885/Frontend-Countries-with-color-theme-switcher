@@ -6,6 +6,7 @@
     height: 10vh;
     display: flex;
     align-items: center;
+    transition: var(--transition);
 }
 
 .navbar .banner {

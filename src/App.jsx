@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Navbar } from "./components/Navbar/Navbar";
 import "./App.css";
-import { Container } from "./components/container";
+import { Container } from "./components/Container";
 
 
 export const App = () => {
