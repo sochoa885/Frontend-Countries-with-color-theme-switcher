@@ -18,6 +18,7 @@
     border-radius: 7px;
     padding: 18px;
     max-width: 450px;
+    transition: var(--transition);
 }
 
 .input-search .search-icon {
@@ -29,6 +30,7 @@
     height: 18px;
     background-size: cover;
     filter: var(--filter);
+    transition: var(--transition);
 }
 
 .input-search .search {
@@ -39,6 +41,7 @@
     margin-left: 20px;
     font-size: 15px;
     width: 100%;
+    transition: var(--transition);
 }
 
 .input-search .search::placeholder {
@@ -52,6 +55,7 @@
     height: 100%;
     flex-direction: column;
     font-size: 13px;
+    transition: var(--transition);
 }
 
 .select-box .options-container {
@@ -79,6 +83,7 @@
     order: 0;
     display: flex;
     align-items: center;
+    transition: var(--transition);
 }
 
 .selected .label-selected {

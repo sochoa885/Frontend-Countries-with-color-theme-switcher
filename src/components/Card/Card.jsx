@@ -2,9 +2,9 @@
 import "./Card.css";
 
 export const Card = (props) => {
-    const { index, lastCountryRef, country } = props;
+    const { lastCountryRef, country } = props;
     return (
-        <div key={index} className="card" ref={lastCountryRef}>
+        <div className="card" ref={lastCountryRef}>
             <div className="card-header" style={{ backgroundImage: `url(${country.flags.png})` }}>
                 <div className="card-hover">
                     View Details

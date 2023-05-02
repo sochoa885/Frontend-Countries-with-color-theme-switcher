@@ -20,3 +20,9 @@
         margin-top: 30px;
     }
 }
+
+.country-link {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
