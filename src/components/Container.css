@@ -4,5 +4,19 @@
     background-color: var(--background);
     transition: var(--transition);
     min-height: calc(90vh - 1px);
-    margin-top: 1px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--width-cards), 1fr));
+    gap: 5.5vh;
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+    justify-items: center;
+}
+
+@media (max-width: 600px) {
+    .cards-container {
+        margin-top: 30px;
+    }
 }

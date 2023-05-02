@@ -3,7 +3,7 @@
 .navbar {
     background-color: var(--elements);
     box-shadow: var(--shadow);
-    height: 10vh;
+    height: 8vh;
     display: flex;
     align-items: center;
     transition: var(--transition);

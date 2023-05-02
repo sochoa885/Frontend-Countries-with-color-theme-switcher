@@ -1,17 +1,17 @@
 :root {
     --background: hsl(0, 0%, 98%);
-   /* --background: hsl(0, 0%, 50%);*/
     --text-primary: hsl(200, 15%, 8%);
     --text-secondary: hsl(0, 0%, 52%);
     --accent: #dfb017;
     --accent-hover: #cea315; 
     --border: #1f1e1e;
-    --shadow: 1px 1px 1px #00000056;
+    --shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     --elements: hsl(0, 0%, 100%);
-    --margin: 4vw;
+    --margin: 3.2vw;
     --icon-mode: url('/images/dark-icon.svg');
     --filter: none;
     --transition: .2s ease-in-out;
+    --width-cards: 250px;
 }
 
 [data-theme='dark'] {
@@ -21,10 +21,11 @@
     --accent: #6a5acd;
     --accent-hover: #5b4cbe; 
     --border: #696969;
-    --shadow: 1px 1px 1px transparent;
+    --shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     --elements: hsl(209, 23%, 22%);
-    --margin: 4vw;
+    --margin: 3.2vw;
     --icon-mode: url('/images/light-icon.svg');
     --filter: invert(1);
     --transition: .2s ease-in-out;
+    --width-cards: 250px;
 }
