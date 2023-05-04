@@ -13,6 +13,7 @@
     margin-left: var(--margin);
     margin-right: var(--margin);
     justify-items: center;
+    margin-bottom: 20px;
 }
 
 @media (max-width: 600px) {
