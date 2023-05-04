@@ -1,17 +1,16 @@
 import { useState, useEffect } from "react";
 import "./Filtros.css";
 
-export const Filtros = (props) => {
-  const { dataCountries, setFilterCountries, resetCountLimit } = props;
-  const [filters, setFilters] = useState({ search: null, region: null });
-
+export const Filtros = ({propsFiltros}) => {
+  const { dataCountries, setFilterCountries, filters, setFilters, setFiltrado } = propsFiltros;
   const toggleSearch = (e) => {
+    setFiltrado(false);
     if (e.target.value === '') return setFilters((prev) => {
       return {
         ...prev,
         search: null
       };
-    });;
+    });
     setFilters((prev) => {
       return {
         ...prev,
@@ -21,6 +20,7 @@ export const Filtros = (props) => {
   };
 
   const toggleRegion = (region) => {
+    setFiltrado(false);
     setFilters((prev) => {
       return {
         ...prev,
@@ -39,7 +39,6 @@ export const Filtros = (props) => {
     } else if (dataCountries.length !== 0) {
       setFilterCountries(dataCountries);
     }
-    resetCountLimit();
   }, [ filters ]);
 
   const regions = dataCountries.lenght === 0 ? [] : [...new Set(dataCountries.map(country => country.region))];
@@ -47,7 +46,7 @@ export const Filtros = (props) => {
     <div className="filtros">
       <div className="input-search">
         <i className="search-icon"></i>
-        <input className="search" type="text" id="search" placeholder="Search for a country..." onChange={toggleSearch}/>
+        <input autoComplete="off" className="search" type="text" id="search" placeholder="Search for a country..." onChange={toggleSearch} value={filters.search != null ? filters.search : ""}/>
       </div>
       <ComboRegion regions={regions} toggleRegion={toggleRegion}/>
     </div>

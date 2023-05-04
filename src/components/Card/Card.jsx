@@ -21,7 +21,7 @@ export const Card = (props) => {
                     <label htmlFor="region" className="title">Region:</label><p className='text' id="region">{country.region}</p>
                 </div>
                 <div className="data">
-                    <label htmlFor="capital" className="title">Capital:</label><p className='text' id="capital">{country.capital}</p>
+                    <label htmlFor="capital" className="title">Capital:</label><p className='text' id="capital">{country.capital ? country.capital.slice(0,2).join(", ") : ""}</p>
                 </div>
             </div>
         </div>

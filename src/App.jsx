@@ -10,8 +10,11 @@ export const App = () => {
   const [dataCountries, setDataCountries] = useState([]);const limitData = 15;
   const [countLimit, setCountLimit] = useState(limitData);
   const [filterCountries, setFilterCountries] = useState([]);
+  const [filters, setFilters] = useState({ search: null, region: null });
+  const [filtrado, setFiltrado] = useState(false);
 
   const resetCountLimit = () => {
+    setFiltrado(true);
     setCountLimit(limitData);
   };
 
@@ -50,18 +53,44 @@ export const App = () => {
     requestCountries();
   }, []);
 
+  useEffect(() => {
+    if(!filtrado) resetCountLimit()
+  }, [filterCountries]);
+  
+  const props = {
+    countLimit: countLimit,
+    filterCountries: filterCountries,
+    lastCountryRef: lastCountryRef,
+    propsFiltros: {
+      dataCountries: dataCountries,
+      setFilterCountries: setFilterCountries,
+      filters: filters,
+      setFilters: setFilters,
+      setFiltrado: setFiltrado
+    }
+  };
+  
   return (
     <div>
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
       <BrowserRouter>
         <Routes>
           <Route
             path="/"
-            element={<Container dataCountries={dataCountries} countLimit={countLimit} filterCountries={filterCountries} setFilterCountries={setFilterCountries} resetCountLimit={resetCountLimit} lastCountryRef={lastCountryRef}/>}
+            element={
+              <div>
+                <Navbar theme={theme} toggleTheme={toggleTheme} />
+                <Container props={props} />
+              </div>
+              }
           />
           <Route
             path="/country/:id"
-            element={<Details dataCountries={dataCountries} />}
+            element={
+              <div>
+                <Navbar theme={theme} toggleTheme={toggleTheme} />
+                <Details dataCountries={dataCountries} />
+              </div>
+            }
           />
         </Routes>
       </BrowserRouter>

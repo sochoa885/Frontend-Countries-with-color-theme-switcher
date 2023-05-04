@@ -52,3 +52,9 @@
     filter: var(--filter);
     margin-right: 5px;
 }
+
+.root-route {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}

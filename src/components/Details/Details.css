@@ -1,0 +1,130 @@
+@import url('./../../styles/var.css');
+
+.container {
+    margin: var(--margin)
+}
+
+.name-country {
+    transition: var(--transition);
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--elements);
+    border-radius: 5px;
+    border: none;
+    box-shadow: var(--shadow);
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    height: 6vh;
+    width: 9vw;
+    transition: var(--transition);
+}
+
+.back-button .back-text {
+    text-align: center;
+    font-size: min(3.5vw, 15px);
+    font-weight: 300;
+}
+
+.back-button .back-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background-image: url('/images/back-icon.svg');
+    background-size: cover;
+    filter: var(--filter);
+    margin-right: 10px;
+    transition: var(--transition);
+}
+
+.country-details {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.country-flag {
+    width: 38vw;
+    height: 60vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.country-information {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.country-information .data {
+    display: flex;
+    color: var(--text-primary);
+    font-size: 16px;
+    transition: var(--transition);
+    margin-top: 8px;
+}
+
+.country-information .data .title {
+    font-weight: bold;
+}
+
+.country-information .data .text {
+    margin: 0;
+    margin-left: 8px;
+    font-weight: 100;
+}
+
+.border-countries {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.border-countries .title{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.border-countries .border-container .border{ 
+    margin: 5px;
+    border: none;
+    background-color: var(--elements);
+    box-shadow: var(--shadow);
+    height: auto;
+    width: 100px;
+    padding: 8px;
+    border-radius: 5px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+@media (max-width: 600px) {
+    .back-button {
+        margin-top: 10px;
+        width: 30vw;
+    }
+    .country-details {
+        grid-template-columns: 1fr;
+    }
+    .country-information {
+        grid-template-columns: 1fr;
+    }
+    .border-countries {
+        grid-template-columns: 1fr;
+    }
+    .country-flag {
+        width: 94vw;
+        height: 30vh;
+        align-items: center;
+    }
+}
