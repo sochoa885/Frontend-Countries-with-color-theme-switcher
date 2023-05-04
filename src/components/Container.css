@@ -4,6 +4,7 @@
     background-color: var(--background);
     transition: var(--transition);
     min-height: calc(90vh - 1px);
+    flex: 1;
 }
 
 .cards-container {
@@ -13,7 +14,7 @@
     margin-left: var(--margin);
     margin-right: var(--margin);
     justify-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 @media (max-width: 600px) {

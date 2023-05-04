@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Container } from "./components/Container";
 import { Details } from "./components/Details/Details";
+import { Footer } from "./components/Footer/Footer";
 import "./app.css";
 
 export const App = () => {
@@ -41,7 +42,6 @@ export const App = () => {
 
   useEffect(() => {
     const requestCountries = async () => {
-      console.log("Peticion");
       fetch("https://restcountries.com/v3.1/all")
         .then((response) => response.json())
         .then((response) => {
@@ -80,6 +80,7 @@ export const App = () => {
               <div>
                 <Navbar theme={theme} toggleTheme={toggleTheme} />
                 <Container props={props} />
+                <Footer/>
               </div>
               }
           />

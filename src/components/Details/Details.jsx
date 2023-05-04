@@ -5,7 +5,6 @@ export const Details = ({ dataCountries }) => {
   const navigate = useNavigate();
   const { id } = useParams();
   const country = dataCountries.find(contry => contry.name.common === id);
-  console.log(country)
   if (!country) return <></>
   return (
     <div className="container">
